@@ -79,7 +79,7 @@ namespace At.Matus.Instruments.Gossen.Mavo
         public void Reset()
         {
             Query("*RST");
-            Thread.Sleep(4000); // Wait for the device to reset
+            Thread.Sleep(DELAY_AFTERRESET); // Wait for the device to reset
         }
 
         // By making this method public one can gain full control over the instrument
@@ -145,7 +145,8 @@ namespace At.Matus.Instruments.Gossen.Mavo
 
         private void SetEchoON() => Query("ECH ON"); // SYSTEM:ECHO ON
 
-        private const int DELAY_AFTERWRITE = 10; // Delay in milliseconds after writing a command   
+        private const int DELAY_AFTERRESET = 4000; // Delay in milliseconds after resetting the device, as it needs time to reboot and be ready for commands  
+        private const int DELAY_AFTERWRITE = 10;   // Delay in milliseconds after writing a command   
         private readonly SerialPort comPort;
         private readonly ErrorHandler errorHandler = new ErrorHandler() { OnError = ErrorReaction.Ignore };
 
