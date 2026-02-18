@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\At.Matus.Instruments.Gossen.Mavo\At.Matus.Instruments.Gossen.Mavo.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="At.Matus.Instruments.Gossen.Mavo">
+      <HintPath>..\At.Matus.Instruments.Gossen.Mavo\bin\Release\net8.0\At.Matus.Instruments.Gossen.Mavo.dll</HintPath>
+    </Reference>
+    <Reference Include="At.Matus.StatisticPod">
+      <HintPath>..\..\At.Matus.StatisticPod\bin\Release\At.Matus.StatisticPod.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
